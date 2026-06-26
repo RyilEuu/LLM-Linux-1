@@ -1,0 +1,19 @@
+{
+  "deny_tool_regex": [],
+  "deny_rule_regex": [],
+  "deny_raw_regex": [
+    "\\\\bthread safety\\\\b",
+    "\\\\bstyle\\\\b"
+  ],
+  "deny_message_regex": [
+    "\\\\bperformance\\\\b"
+  ],
+  "deny_file_regex": [
+    "^tools/"
+  ],
+  "deny_severity": [],
+  "allow_raw_regex": [],
+  "allow_message_regex": [],
+  "allow_file_regex": []
+}
+
