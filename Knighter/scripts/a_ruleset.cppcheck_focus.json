@@ -1,0 +1,24 @@
+{
+  "deny_tool_regex": [],
+  "deny_rule_regex": [
+    "^unusedFunction$",
+    "^constParameterPointer$",
+    "^constVariablePointer$",
+    "^unusedAllocatedMemory$"
+  ],
+  "deny_raw_regex": [],
+  "deny_message_regex": [],
+  "deny_file_regex": [],
+  "deny_severity": [
+    "style",
+    "portability",
+    "information"
+  ],
+  "allow_raw_regex": [],
+  "allow_message_regex": [],
+  "allow_file_regex": [],
+  "allow_rule_regex": [],
+  "allow_tool_regex": [],
+  "allow_severity": []
+}
+

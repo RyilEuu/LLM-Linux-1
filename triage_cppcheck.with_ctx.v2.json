@@ -1,0 +1,908 @@
+{
+  "summary": {
+    "input_findings": 32,
+    "normalized": 32,
+    "deduped": 32,
+    "kept": 7,
+    "dropped": 25,
+    "kept_by_tool": {
+      "cppcheck": 7
+    },
+    "kept_by_rule": {
+      "deallocret": 1,
+      "doubleFree": 1,
+      "getsCalled": 1,
+      "memleak": 1,
+      "nullPointerRedundantCheck": 1,
+      "resourceLeak": 1,
+      "uninitvar": 1
+    },
+    "dropped_by_reason": {
+      "deny_rule_regex": 24,
+      "deny_severity": 1
+    },
+    "likely_fp_in_kept": 1,
+    "code_context_filled": 32,
+    "code_context_missing": 0
+  },
+  "analysis": {
+    "keep_rate": 0.21875,
+    "top_kept_rules": [
+      {
+        "key": "deallocret",
+        "count": 1
+      },
+      {
+        "key": "doubleFree",
+        "count": 1
+      },
+      {
+        "key": "getsCalled",
+        "count": 1
+      },
+      {
+        "key": "memleak",
+        "count": 1
+      },
+      {
+        "key": "nullPointerRedundantCheck",
+        "count": 1
+      },
+      {
+        "key": "resourceLeak",
+        "count": 1
+      },
+      {
+        "key": "uninitvar",
+        "count": 1
+      }
+    ],
+    "top_dropped_reasons": [
+      {
+        "key": "deny_rule_regex",
+        "count": 24
+      },
+      {
+        "key": "deny_severity",
+        "count": 1
+      }
+    ],
+    "top_categories": [
+      {
+        "key": "resource/leak",
+        "count": 2
+      },
+      {
+        "key": "api/unsafe_function",
+        "count": 1
+      },
+      {
+        "key": "memory/double_free",
+        "count": 1
+      },
+      {
+        "key": "memory/null_pointer",
+        "count": 1
+      },
+      {
+        "key": "memory/uninitialized",
+        "count": 1
+      },
+      {
+        "key": "memory/use_after_free",
+        "count": 1
+      }
+    ],
+    "likely_fp_examples": [
+      {
+        "finding_id": "179fe9cd296a48583363dd1320df1492",
+        "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45:50: warning: Either the condition '!s' is redundant or there is possible null pointer dereference: s.",
+        "tool": "cppcheck",
+        "rule": "nullPointerRedundantCheck",
+        "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c",
+        "line": 45,
+        "col": 50,
+        "severity": "warning",
+        "message": "Either the condition '!s' is redundant or there is possible null pointer dereference: s.",
+        "rule_decision": "keep",
+        "rule_reason": "kept",
+        "rule_likely_fp": true,
+        "rule_fp_reason": "non_security_or_style_warning",
+        "category": "memory/null_pointer",
+        "metadata": {
+          "cwe": "476"
+        }
+      }
+    ]
+  },
+  "kept": [
+    {
+      "finding_id": "9b4ef9f1f91dc05607358e643c7a818c",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c:80:30: warning: Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead.",
+      "tool": "cppcheck",
+      "rule": "getsCalled",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c",
+      "line": 80,
+      "col": 30,
+      "severity": "warning",
+      "message": "Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead.",
+      "rule_decision": "keep",
+      "rule_reason": "kept",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "api/unsafe_function",
+      "metadata": {
+        "cwe": "477"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c:80\n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | \n   56 | \n   57 | \n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n   66 | \n   67 | \n   68 | \n   69 | \n   70 | \n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | \n   77 | \n   78 | \n   79 | \n>> 80 | void readin(){ char buf[16]; gets(buf); }\n   81 | \n   82 | \n   83 | \n   84 | \n   85 | \n   86 | \n   87 | \n   88 | \n   89 | \n   90 | "
+    },
+    {
+      "finding_id": "7b606387c790227802469de610e6e66d",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12:55: error: Resource leak: f",
+      "tool": "cppcheck",
+      "rule": "resourceLeak",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c",
+      "line": 12,
+      "col": 55,
+      "severity": "error",
+      "message": "Resource leak: f",
+      "rule_decision": "keep",
+      "rule_reason": "kept",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "resource/leak",
+      "metadata": {
+        "cwe": "775"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n>> 12 | int leak(){ FILE *f=fopen(\"a\",\"r\"); if(!f) return -1; return 0; }\n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | "
+    },
+    {
+      "finding_id": "f8cf91d1fd2f3879dcb26cd71ba7810f",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c:22:25: error: Uninitialized variable: status",
+      "tool": "cppcheck",
+      "rule": "uninitvar",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c",
+      "line": 22,
+      "col": 25,
+      "severity": "error",
+      "message": "Uninitialized variable: status",
+      "rule_decision": "keep",
+      "rule_reason": "kept",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "memory/uninitialized",
+      "metadata": {
+        "cwe": "457"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c:22\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n>> 22 | int q(){ int status; if(status) return 1; return 0; }\n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | "
+    },
+    {
+      "finding_id": "6e53db78015554fbaf6db5e7169f3c8e",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c:55:49: error: Returning/dereferencing 'p' after it is deallocated / released",
+      "tool": "cppcheck",
+      "rule": "deallocret",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c",
+      "line": 55,
+      "col": 49,
+      "severity": "error",
+      "message": "Returning/dereferencing 'p' after it is deallocated / released",
+      "rule_decision": "keep",
+      "rule_reason": "kept",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "memory/use_after_free",
+      "metadata": {
+        "cwe": "672"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c:55\n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n   45 | \n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n>> 55 | int h(){ int *p = malloc(sizeof(int)); free(p); return *p; }\n   56 | \n   57 | \n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | "
+    },
+    {
+      "finding_id": "5ef9f68d35de3755f077033e0059ea8e",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c:200:39: error: Memory pointed to by 'p' is freed twice.",
+      "tool": "cppcheck",
+      "rule": "doubleFree",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c",
+      "line": 200,
+      "col": 39,
+      "severity": "error",
+      "message": "Memory pointed to by 'p' is freed twice.",
+      "rule_decision": "keep",
+      "rule_reason": "kept",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "memory/double_free",
+      "metadata": {
+        "cwe": "415"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c:200\n   170 | \n   171 | \n   172 | \n   173 | \n   174 | \n   175 | \n   176 | \n   177 | \n   178 | \n   179 | \n   180 | \n   181 | \n   182 | \n   183 | \n   184 | \n   185 | \n   186 | \n   187 | \n   188 | \n   189 | \n   190 | \n   191 | \n   192 | \n   193 | \n   194 | \n   195 | \n   196 | \n   197 | \n   198 | \n   199 | \n>> 200 | void d(){ void *p=malloc(8); free(p); free(p); }\n   201 | \n   202 | \n   203 | \n   204 | \n   205 | \n   206 | \n   207 | \n   208 | \n   209 | \n   210 | "
+    },
+    {
+      "finding_id": "9a3d69ae3924b0c14323ed90892a2152",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c:88:51: error: Memory leak: ptr",
+      "tool": "cppcheck",
+      "rule": "memleak",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c",
+      "line": 88,
+      "col": 51,
+      "severity": "error",
+      "message": "Memory leak: ptr",
+      "rule_decision": "keep",
+      "rule_reason": "kept",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "resource/leak",
+      "metadata": {
+        "cwe": "401"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c:88\n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n   66 | \n   67 | \n   68 | \n   69 | \n   70 | \n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | \n   77 | \n   78 | \n   79 | \n   80 | \n   81 | \n   82 | \n   83 | \n   84 | \n   85 | \n   86 | \n   87 | \n>> 88 | int f(int fail){ char *ptr = malloc(16); if(fail) return -1; free(ptr); return 0; }\n   89 | \n   90 | \n   91 | \n   92 | \n   93 | \n   94 | \n   95 | \n   96 | \n   97 | \n   98 | "
+    },
+    {
+      "finding_id": "179fe9cd296a48583363dd1320df1492",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45:50: warning: Either the condition '!s' is redundant or there is possible null pointer dereference: s.",
+      "tool": "cppcheck",
+      "rule": "nullPointerRedundantCheck",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c",
+      "line": 45,
+      "col": 50,
+      "severity": "warning",
+      "message": "Either the condition '!s' is redundant or there is possible null pointer dereference: s.",
+      "rule_decision": "keep",
+      "rule_reason": "kept",
+      "rule_likely_fp": true,
+      "rule_fp_reason": "non_security_or_style_warning",
+      "category": "memory/null_pointer",
+      "metadata": {
+        "cwe": "476"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45\n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n>> 45 | int connect_socket(struct socket *s){ int port = s->port; if(!s) return -1; return port; }\n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | "
+    }
+  ],
+  "dropped": [
+    {
+      "finding_id": "2b38de10f90d97a7941872306fa9d11a",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12:19: style: Variable 'f' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constVariablePointer",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c",
+      "line": 12,
+      "col": 19,
+      "severity": "style",
+      "message": "Variable 'f' can be declared as pointer to const",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "398"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n>> 12 | int leak(){ FILE *f=fopen(\"a\",\"r\"); if(!f) return -1; return 0; }\n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | "
+    },
+    {
+      "finding_id": "240d9947b9c033d972fd0842e300a283",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\exec.c:45:16: style: Parameter 'cmd' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constParameterPointer",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\exec.c",
+      "line": 45,
+      "col": 16,
+      "severity": "style",
+      "message": "Parameter 'cmd' can be declared as pointer to const",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "398"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\exec.c:45\n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n>> 45 | void run(char *cmd){ system(cmd); }\n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | "
+    },
+    {
+      "finding_id": "768f413c9da368c1619ec5004a084806",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\log.c:33:17: style: Parameter 's' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constParameterPointer",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\log.c",
+      "line": 33,
+      "col": 17,
+      "severity": "style",
+      "message": "Parameter 's' can be declared as pointer to const",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "398"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\log.c:33\n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n>> 33 | void vlog(char *s){ printf(s); }\n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | "
+    },
+    {
+      "finding_id": "5cbe934b52b2583f2b1eeb47874be7c8",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c:200:19: style: Variable 'p' is allocated memory that is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedAllocatedMemory",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c",
+      "line": 200,
+      "col": 19,
+      "severity": "style",
+      "message": "Variable 'p' is allocated memory that is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "563"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c:200\n   170 | \n   171 | \n   172 | \n   173 | \n   174 | \n   175 | \n   176 | \n   177 | \n   178 | \n   179 | \n   180 | \n   181 | \n   182 | \n   183 | \n   184 | \n   185 | \n   186 | \n   187 | \n   188 | \n   189 | \n   190 | \n   191 | \n   192 | \n   193 | \n   194 | \n   195 | \n   196 | \n   197 | \n   198 | \n   199 | \n>> 200 | void d(){ void *p=malloc(8); free(p); free(p); }\n   201 | \n   202 | \n   203 | \n   204 | \n   205 | \n   206 | \n   207 | \n   208 | \n   209 | \n   210 | "
+    },
+    {
+      "finding_id": "97cb82519d170d3a407f49edf5086b61",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c:88:30: style: Variable 'ptr' is allocated memory that is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedAllocatedMemory",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c",
+      "line": 88,
+      "col": 30,
+      "severity": "style",
+      "message": "Variable 'ptr' is allocated memory that is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "563"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c:88\n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n   66 | \n   67 | \n   68 | \n   69 | \n   70 | \n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | \n   77 | \n   78 | \n   79 | \n   80 | \n   81 | \n   82 | \n   83 | \n   84 | \n   85 | \n   86 | \n   87 | \n>> 88 | int f(int fail){ char *ptr = malloc(16); if(fail) return -1; free(ptr); return 0; }\n   89 | \n   90 | \n   91 | \n   92 | \n   93 | \n   94 | \n   95 | \n   96 | \n   97 | \n   98 | "
+    },
+    {
+      "finding_id": "826d31cf4b01b45080aa445876e9a4b7",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45:35: style: Parameter 's' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constParameterPointer",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c",
+      "line": 45,
+      "col": 35,
+      "severity": "style",
+      "message": "Parameter 's' can be declared as pointer to const",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "398"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45\n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n>> 45 | int connect_socket(struct socket *s){ int port = s->port; if(!s) return -1; return port; }\n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | "
+    },
+    {
+      "finding_id": "331dd1effe72139a33764b9cbf968e5e",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\user.c:21:54: portability: Undefined behaviour, pointer arithmetic 's+10' is out of bounds.",
+      "tool": "cppcheck",
+      "rule": "pointerOutOfBounds",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\user.c",
+      "line": 21,
+      "col": 54,
+      "severity": "portability",
+      "message": "Undefined behaviour, pointer arithmetic 's+10' is out of bounds.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_severity",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "memory/out_of_bounds",
+      "metadata": {
+        "cwe": "758"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\user.c:21\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n>> 21 | void ptrarith(){ const char *s=\"abc\"; const char *p=s+10; (void)p; }\n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | "
+    },
+    {
+      "finding_id": "2e7ede211cf5dccf96ca399ea76efed5",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c:80:0: style: The function 'readin' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c",
+      "line": 80,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'readin' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c:80\n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | \n   56 | \n   57 | \n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n   66 | \n   67 | \n   68 | \n   69 | \n   70 | \n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | \n   77 | \n   78 | \n   79 | \n>> 80 | void readin(){ char buf[16]; gets(buf); }\n   81 | \n   82 | \n   83 | \n   84 | \n   85 | \n   86 | \n   87 | \n   88 | \n   89 | \n   90 | "
+    },
+    {
+      "finding_id": "3e5ceb07cf2167c06f4b90876b657f52",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12:0: style: The function 'leak' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c",
+      "line": 12,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'leak' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n>> 12 | int leak(){ FILE *f=fopen(\"a\",\"r\"); if(!f) return -1; return 0; }\n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | "
+    },
+    {
+      "finding_id": "1710bf1cd50574884a6847fdd1ef75cf",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\auth.c:102:0: style: The function 'alloc' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\auth.c",
+      "line": 102,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'alloc' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\auth.c:102\n    72 | \n    73 | \n    74 | \n    75 | \n    76 | \n    77 | \n    78 | \n    79 | \n    80 | \n    81 | \n    82 | \n    83 | \n    84 | \n    85 | \n    86 | \n    87 | \n    88 | \n    89 | \n    90 | \n    91 | \n    92 | \n    93 | \n    94 | \n    95 | \n    96 | \n    97 | \n    98 | \n    99 | \n   100 | \n   101 | \n>> 102 | void *alloc(int n){ return malloc(n * (int)sizeof(int)); }\n   103 | \n   104 | \n   105 | \n   106 | \n   107 | \n   108 | \n   109 | \n   110 | \n   111 | \n   112 | "
+    },
+    {
+      "finding_id": "21c89efddc50a30a529c578788f97ae0",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\crypto.c:99:0: style: The function 'md5sum' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\crypto.c",
+      "line": 99,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'md5sum' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\crypto.c:99\n    69 | \n    70 | \n    71 | \n    72 | \n    73 | \n    74 | \n    75 | \n    76 | \n    77 | \n    78 | \n    79 | \n    80 | \n    81 | \n    82 | \n    83 | \n    84 | \n    85 | \n    86 | \n    87 | \n    88 | \n    89 | \n    90 | \n    91 | \n    92 | \n    93 | \n    94 | \n    95 | \n    96 | \n    97 | \n    98 | \n>>  99 | void md5sum(){ /* MD5 used as checksum */ }\n   100 | \n   101 | \n   102 | \n   103 | \n   104 | \n   105 | \n   106 | \n   107 | \n   108 | \n   109 | "
+    },
+    {
+      "finding_id": "a4faf23e242b1cf21f43bdcfb58117e3",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\data.c:9:0: style: The function 'r' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\data.c",
+      "line": 9,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'r' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\data.c:9\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n>>  9 | int r(){ return rand(); }\n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | "
+    },
+    {
+      "finding_id": "d8b8d4f8a533fef46944ab4da213aedb",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c:22:0: style: The function 'q' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c",
+      "line": 22,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'q' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c:22\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n>> 22 | int q(){ int status; if(status) return 1; return 0; }\n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | "
+    },
+    {
+      "finding_id": "0c2eaee7f2b7f6c52738e315dff5a3ea",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\exec.c:45:0: style: The function 'run' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\exec.c",
+      "line": 45,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'run' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\exec.c:45\n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n>> 45 | void run(char *cmd){ system(cmd); }\n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | "
+    },
+    {
+      "finding_id": "845df731c5fea1bb308c0e1d9d7204ee",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c:55:0: style: The function 'h' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c",
+      "line": 55,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'h' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c:55\n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n   45 | \n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n>> 55 | int h(){ int *p = malloc(sizeof(int)); free(p); return *p; }\n   56 | \n   57 | \n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | "
+    },
+    {
+      "finding_id": "88d4d515e142a9ee40ce60d93be21535",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\io.c:12:0: style: The function 'copy_msg' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\io.c",
+      "line": 12,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'copy_msg' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\io.c:12\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n>> 12 | void copy_msg(const char *msg){ char buf[64]; strcpy(buf, msg); }\n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | "
+    },
+    {
+      "finding_id": "b4a5f7c9209191a5cd84c7335eede057",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\log.c:33:0: style: The function 'vlog' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\log.c",
+      "line": 33,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'vlog' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\log.c:33\n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n>> 33 | void vlog(char *s){ printf(s); }\n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | "
+    },
+    {
+      "finding_id": "ccf27a488d82bcee8e5641dac12db591",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c:200:0: style: The function 'd' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c",
+      "line": 200,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'd' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c:200\n   170 | \n   171 | \n   172 | \n   173 | \n   174 | \n   175 | \n   176 | \n   177 | \n   178 | \n   179 | \n   180 | \n   181 | \n   182 | \n   183 | \n   184 | \n   185 | \n   186 | \n   187 | \n   188 | \n   189 | \n   190 | \n   191 | \n   192 | \n   193 | \n   194 | \n   195 | \n   196 | \n   197 | \n   198 | \n   199 | \n>> 200 | void d(){ void *p=malloc(8); free(p); free(p); }\n   201 | \n   202 | \n   203 | \n   204 | \n   205 | \n   206 | \n   207 | \n   208 | \n   209 | \n   210 | "
+    },
+    {
+      "finding_id": "271d199f61c9b2108f4df8bab92e9106",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c:88:0: style: The function 'f' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c",
+      "line": 88,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'f' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c:88\n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n   66 | \n   67 | \n   68 | \n   69 | \n   70 | \n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | \n   77 | \n   78 | \n   79 | \n   80 | \n   81 | \n   82 | \n   83 | \n   84 | \n   85 | \n   86 | \n   87 | \n>> 88 | int f(int fail){ char *ptr = malloc(16); if(fail) return -1; free(ptr); return 0; }\n   89 | \n   90 | \n   91 | \n   92 | \n   93 | \n   94 | \n   95 | \n   96 | \n   97 | \n   98 | "
+    },
+    {
+      "finding_id": "b2e2867e86c36657cc94f89491027796",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45:0: style: The function 'connect_socket' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c",
+      "line": 45,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'connect_socket' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45\n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n>> 45 | int connect_socket(struct socket *s){ int port = s->port; if(!s) return -1; return port; }\n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | "
+    },
+    {
+      "finding_id": "2f4140a8b81b9abff7b97c7911a24dcf",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\proc.c:66:0: style: The function 'lock_order' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\proc.c",
+      "line": 66,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'lock_order' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\proc.c:66\n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n   45 | \n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | \n   56 | \n   57 | \n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n>> 66 | void lock_order(){ /* false deadlock warning example */ }\n   67 | \n   68 | \n   69 | \n   70 | \n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | "
+    },
+    {
+      "finding_id": "6bcbad2b0d75fe3b61e70bf2b69b9ab6",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\sys.c:70:0: style: The function 'div0' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\sys.c",
+      "line": 70,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'div0' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\sys.c:70\n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n   45 | \n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | \n   56 | \n   57 | \n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n   66 | \n   67 | \n   68 | \n   69 | \n>> 70 | int div0(int d){ return 100 / d; }\n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | \n   77 | \n   78 | \n   79 | \n   80 | "
+    },
+    {
+      "finding_id": "efbcb44fd9c6233e16441b3f8c5c2bbb",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\thread.c:30:0: style: The function 'g' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\thread.c",
+      "line": 30,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'g' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\thread.c:30\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n>> 30 | void g(pthread_mutex_t *m){ pthread_mutex_unlock(m); pthread_mutex_unlock(m); }\n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | "
+    },
+    {
+      "finding_id": "463462f00dd6b10a4e37779c0212b328",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\user.c:21:0: style: The function 'ptrarith' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\user.c",
+      "line": 21,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'ptrarith' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\user.c:21\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n>> 21 | void ptrarith(){ const char *s=\"abc\"; const char *p=s+10; (void)p; }\n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | "
+    },
+    {
+      "finding_id": "88ac4f0d92c8c74b374f2797384694fb",
+      "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\util.c:41:0: style: The function 'get' is never used.",
+      "tool": "cppcheck",
+      "rule": "unusedFunction",
+      "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\util.c",
+      "line": 41,
+      "col": 0,
+      "severity": "style",
+      "message": "The function 'get' is never used.",
+      "rule_decision": "drop",
+      "rule_reason": "deny_rule_regex",
+      "rule_likely_fp": false,
+      "rule_fp_reason": "no_fp_signal",
+      "category": "other",
+      "metadata": {
+        "cwe": "561"
+      },
+      "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\util.c:41\n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n>> 41 | int arr[8]; int get(int i){ return arr[i]; }\n   42 | \n   43 | \n   44 | \n   45 | \n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | "
+    }
+  ],
+  "samples": {
+    "rule_reason": {
+      "kept": [
+        {
+          "finding_id": "9b4ef9f1f91dc05607358e643c7a818c",
+          "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c:80:30: warning: Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead.",
+          "tool": "cppcheck",
+          "rule": "getsCalled",
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c",
+          "line": 80,
+          "col": 30,
+          "severity": "warning",
+          "message": "Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead.",
+          "rule_decision": "keep",
+          "rule_reason": "kept",
+          "rule_likely_fp": false,
+          "rule_fp_reason": "no_fp_signal",
+          "category": "api/unsafe_function",
+          "metadata": {
+            "cwe": "477"
+          }
+        },
+        {
+          "finding_id": "7b606387c790227802469de610e6e66d",
+          "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12:55: error: Resource leak: f",
+          "tool": "cppcheck",
+          "rule": "resourceLeak",
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c",
+          "line": 12,
+          "col": 55,
+          "severity": "error",
+          "message": "Resource leak: f",
+          "rule_decision": "keep",
+          "rule_reason": "kept",
+          "rule_likely_fp": false,
+          "rule_fp_reason": "no_fp_signal",
+          "category": "resource/leak",
+          "metadata": {
+            "cwe": "775"
+          }
+        },
+        {
+          "finding_id": "f8cf91d1fd2f3879dcb26cd71ba7810f",
+          "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c:22:25: error: Uninitialized variable: status",
+          "tool": "cppcheck",
+          "rule": "uninitvar",
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c",
+          "line": 22,
+          "col": 25,
+          "severity": "error",
+          "message": "Uninitialized variable: status",
+          "rule_decision": "keep",
+          "rule_reason": "kept",
+          "rule_likely_fp": false,
+          "rule_fp_reason": "no_fp_signal",
+          "category": "memory/uninitialized",
+          "metadata": {
+            "cwe": "457"
+          }
+        }
+      ]
+    },
+    "rule_fp_reason": {
+      "no_fp_signal": [
+        {
+          "finding_id": "9b4ef9f1f91dc05607358e643c7a818c",
+          "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c:80:30: warning: Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead.",
+          "tool": "cppcheck",
+          "rule": "getsCalled",
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c",
+          "line": 80,
+          "col": 30,
+          "severity": "warning",
+          "message": "Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead.",
+          "rule_decision": "keep",
+          "rule_reason": "kept",
+          "rule_likely_fp": false,
+          "rule_fp_reason": "no_fp_signal",
+          "category": "api/unsafe_function",
+          "metadata": {
+            "cwe": "477"
+          }
+        },
+        {
+          "finding_id": "7b606387c790227802469de610e6e66d",
+          "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12:55: error: Resource leak: f",
+          "tool": "cppcheck",
+          "rule": "resourceLeak",
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c",
+          "line": 12,
+          "col": 55,
+          "severity": "error",
+          "message": "Resource leak: f",
+          "rule_decision": "keep",
+          "rule_reason": "kept",
+          "rule_likely_fp": false,
+          "rule_fp_reason": "no_fp_signal",
+          "category": "resource/leak",
+          "metadata": {
+            "cwe": "775"
+          }
+        },
+        {
+          "finding_id": "f8cf91d1fd2f3879dcb26cd71ba7810f",
+          "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c:22:25: error: Uninitialized variable: status",
+          "tool": "cppcheck",
+          "rule": "uninitvar",
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c",
+          "line": 22,
+          "col": 25,
+          "severity": "error",
+          "message": "Uninitialized variable: status",
+          "rule_decision": "keep",
+          "rule_reason": "kept",
+          "rule_likely_fp": false,
+          "rule_fp_reason": "no_fp_signal",
+          "category": "memory/uninitialized",
+          "metadata": {
+            "cwe": "457"
+          }
+        }
+      ],
+      "non_security_or_style_warning": [
+        {
+          "finding_id": "179fe9cd296a48583363dd1320df1492",
+          "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45:50: warning: Either the condition '!s' is redundant or there is possible null pointer dereference: s.",
+          "tool": "cppcheck",
+          "rule": "nullPointerRedundantCheck",
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c",
+          "line": 45,
+          "col": 50,
+          "severity": "warning",
+          "message": "Either the condition '!s' is redundant or there is possible null pointer dereference: s.",
+          "rule_decision": "keep",
+          "rule_reason": "kept",
+          "rule_likely_fp": true,
+          "rule_fp_reason": "non_security_or_style_warning",
+          "category": "memory/null_pointer",
+          "metadata": {
+            "cwe": "476"
+          }
+        }
+      ]
+    }
+  },
+  "missing_code_context": []
+}
