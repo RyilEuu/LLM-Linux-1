@@ -15,3 +15,5 @@ Knighter/scripts/make_sample_target.py：生成示例 C 目标代码，用于本
 code/sample_target/：示例 C 目标代码目录，供 cppcheck 扫描与 code_context 补全使用。
 for_llm.cppcheck.with_ctx.v2.jsonl：供 LLM 判定阶段使用的 JSONL 输入，含 code_context。
 triage_cppcheck.with_ctx.v2.json：规则层 triage 分析报告，含 summary、analysis 统计与典型样例。
+
+final_report.json：最终实验报告，融合两轮判定结果，对每个缺陷给出最终 verdict（true / false / uncertain），并包含完整的流水线统计
