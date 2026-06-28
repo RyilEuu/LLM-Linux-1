@@ -1,8 +1,8 @@
 # LLM-Linux-1
 软件质量保障-LLM辅助Linux内核缺陷静态检测-第一组
 
-judge_engine.py：基于LLM的静态分析缺陷二次判定引擎，用于区分真实漏洞与误报。
-judge_output.json：使用上述引擎对示例缺陷数据判定的输出结果报告。
+run.py：基于LLM的静态分析缺陷二次判定引擎，用于区分真实漏洞与误报。
+llm_judgments.json：使用上述引擎对示例缺陷数据判定的输出结果报告。
 
 Knighter/src/a_rule_triage.py：规则层核心逻辑，负责格式归一化、去重、规则过滤、统计分析、补全 code_context、导出 JSONL。
 Knighter/scripts/a_rule_triage.py：规则层命令行入口，支持 triage、enrich_code_context、export_for_llm。
