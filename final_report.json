@@ -1,0 +1,387 @@
+{
+  "metadata": {
+    "model": "deepseek-chat",
+    "rounds": 2,
+    "source": "data\\external\\llm_judgments.json",
+    "fusion_note": "保留 llm_agree/uncertain 标记，对多轮采样结果做交叉对比；uncertain 样本进入人工复核闭环。",
+    "upstream_summary": {
+      "total": 7,
+      "verdict_real_bug": 2,
+      "verdict_false_positive": 2,
+      "uncertain": 3,
+      "false_positive_by_category": {
+        "path": 2,
+        "other": 0,
+        "uncertain": 3
+      }
+    }
+  },
+  "pipeline_summary": {
+    "stages": [
+      {
+        "stage": "原始输出",
+        "count": 32,
+        "note": "静态分析工具全量输出"
+      },
+      {
+        "stage": "规则过滤后",
+        "count": 7,
+        "note": "规则层降噪后的待验证缺陷"
+      },
+      {
+        "stage": "LLM判定为真",
+        "count": 2,
+        "note": "双轮一致的真阳性"
+      },
+      {
+        "stage": "LLM判定为假",
+        "count": 2,
+        "note": "双轮一致的误报"
+      },
+      {
+        "stage": "不确定",
+        "count": 3,
+        "note": "两轮不一致或无法确定，需人工复核"
+      }
+    ],
+    "consistency_analysis": {
+      "total": 7,
+      "agreed": 4,
+      "disagreed": 3,
+      "agreement_rate": 0.5714
+    },
+    "fp_category_distribution": {
+      "uncertain": 3,
+      "path": 2
+    },
+    "verdict_distribution": {
+      "true": 2,
+      "uncertain": 3,
+      "false": 2
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "9b4ef9f1f91dc05607358e643c7a818c",
+      "final_verdict": "true",
+      "llm_round1": {
+        "id": 1,
+        "finding_id": "9b4ef9f1f91dc05607358e643c7a818c",
+        "is_true": true,
+        "reason": "gets不安全，已被弃用",
+        "fp_category": "none"
+      },
+      "llm_round2": {
+        "id": 2,
+        "finding_id": "9b4ef9f1f91dc05607358e643c7a818c",
+        "is_true": true,
+        "reason": "gets不安全，已被弃用",
+        "fp_category": "none"
+      },
+      "llm_agree": true,
+      "fp_category": "none",
+      "fusion_reason": "双轮一致判定为真阳性。R1: gets不安全，已被弃用 | R2: gets不安全，已被弃用",
+      "uncertain": false,
+      "finding": {
+        "id": "9b4ef9f1f91dc05607358e643c7a818c",
+        "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c:80:30: warning: Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead.",
+        "tool": "cppcheck",
+        "rule": "getsCalled",
+        "location": {
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c",
+          "line": 80,
+          "col": 30
+        },
+        "message": "Obsolete function 'gets' called. It is recommended to use 'fgets' or 'gets_s' instead.",
+        "severity": "warning",
+        "rule_layer": {
+          "decision": "keep",
+          "reason": "kept",
+          "likely_fp": false,
+          "fp_reason": "no_fp_signal"
+        },
+        "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\api.c:80\n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | \n   56 | \n   57 | \n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n   66 | \n   67 | \n   68 | \n   69 | \n   70 | \n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | \n   77 | \n   78 | \n   79 | \n>> 80 | void readin(){ char buf[16]; gets(buf); }\n   81 | \n   82 | \n   83 | \n   84 | \n   85 | \n   86 | \n   87 | \n   88 | \n   89 | \n   90 | ",
+        "metadata": {
+          "cwe": "477",
+          "category": "api/unsafe_function"
+        }
+      }
+    },
+    {
+      "finding_id": "7b606387c790227802469de610e6e66d",
+      "final_verdict": "true",
+      "llm_round1": {
+        "id": 3,
+        "finding_id": "7b606387c790227802469de610e6e66d",
+        "is_true": true,
+        "reason": "fopen未调用fclose",
+        "fp_category": "none"
+      },
+      "llm_round2": {
+        "id": 4,
+        "finding_id": "7b606387c790227802469de610e6e66d",
+        "is_true": true,
+        "reason": "fopen未调用fclose",
+        "fp_category": "none"
+      },
+      "llm_agree": true,
+      "fp_category": "none",
+      "fusion_reason": "双轮一致判定为真阳性。R1: fopen未调用fclose | R2: fopen未调用fclose",
+      "uncertain": false,
+      "finding": {
+        "id": "7b606387c790227802469de610e6e66d",
+        "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12:55: error: Resource leak: f",
+        "tool": "cppcheck",
+        "rule": "resourceLeak",
+        "location": {
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c",
+          "line": 12,
+          "col": 55
+        },
+        "message": "Resource leak: f",
+        "severity": "error",
+        "rule_layer": {
+          "decision": "keep",
+          "reason": "kept",
+          "likely_fp": false,
+          "fp_reason": "no_fp_signal"
+        },
+        "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\app.c:12\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n>> 12 | int leak(){ FILE *f=fopen(\"a\",\"r\"); if(!f) return -1; return 0; }\n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | ",
+        "metadata": {
+          "cwe": "775",
+          "category": "resource/leak"
+        }
+      }
+    },
+    {
+      "finding_id": "f8cf91d1fd2f3879dcb26cd71ba7810f",
+      "final_verdict": "uncertain",
+      "llm_round1": {
+        "id": 5,
+        "finding_id": "f8cf91d1fd2f3879dcb26cd71ba7810f",
+        "is_true": null,
+        "reason": "需要人工审查",
+        "fp_category": "unknown"
+      },
+      "llm_round2": {
+        "id": 6,
+        "finding_id": "f8cf91d1fd2f3879dcb26cd71ba7810f",
+        "is_true": null,
+        "reason": "需要人工审查",
+        "fp_category": "unknown"
+      },
+      "llm_agree": true,
+      "fp_category": "uncertain",
+      "fusion_reason": "双轮均无法确定，标记 uncertain 并进入人工复核。 R1: 需要人工审查 | R2: 需要人工审查",
+      "uncertain": true,
+      "finding": {
+        "id": "f8cf91d1fd2f3879dcb26cd71ba7810f",
+        "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c:22:25: error: Uninitialized variable: status",
+        "tool": "cppcheck",
+        "rule": "uninitvar",
+        "location": {
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c",
+          "line": 22,
+          "col": 25
+        },
+        "message": "Uninitialized variable: status",
+        "severity": "error",
+        "rule_layer": {
+          "decision": "keep",
+          "reason": "kept",
+          "likely_fp": false,
+          "fp_reason": "no_fp_signal"
+        },
+        "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\db.c:22\n    1 | \n    2 | \n    3 | \n    4 | \n    5 | \n    6 | \n    7 | \n    8 | \n    9 | \n   10 | \n   11 | \n   12 | \n   13 | \n   14 | \n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n>> 22 | int q(){ int status; if(status) return 1; return 0; }\n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | ",
+        "metadata": {
+          "cwe": "457",
+          "category": "memory/uninitialized"
+        }
+      }
+    },
+    {
+      "finding_id": "6e53db78015554fbaf6db5e7169f3c8e",
+      "final_verdict": "uncertain",
+      "llm_round1": {
+        "id": 7,
+        "finding_id": "6e53db78015554fbaf6db5e7169f3c8e",
+        "is_true": null,
+        "reason": "需要人工审查",
+        "fp_category": "unknown"
+      },
+      "llm_round2": {
+        "id": 8,
+        "finding_id": "6e53db78015554fbaf6db5e7169f3c8e",
+        "is_true": null,
+        "reason": "需要人工审查",
+        "fp_category": "unknown"
+      },
+      "llm_agree": true,
+      "fp_category": "uncertain",
+      "fusion_reason": "双轮均无法确定，标记 uncertain 并进入人工复核。 R1: 需要人工审查 | R2: 需要人工审查",
+      "uncertain": true,
+      "finding": {
+        "id": "6e53db78015554fbaf6db5e7169f3c8e",
+        "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c:55:49: error: Returning/dereferencing 'p' after it is deallocated / released",
+        "tool": "cppcheck",
+        "rule": "deallocret",
+        "location": {
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c",
+          "line": 55,
+          "col": 49
+        },
+        "message": "Returning/dereferencing 'p' after it is deallocated / released",
+        "severity": "error",
+        "rule_layer": {
+          "decision": "keep",
+          "reason": "kept",
+          "likely_fp": false,
+          "fp_reason": "no_fp_signal"
+        },
+        "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\file.c:55\n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n   45 | \n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n>> 55 | int h(){ int *p = malloc(sizeof(int)); free(p); return *p; }\n   56 | \n   57 | \n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | ",
+        "metadata": {
+          "cwe": "672",
+          "category": "memory/use_after_free"
+        }
+      }
+    },
+    {
+      "finding_id": "5ef9f68d35de3755f077033e0059ea8e",
+      "final_verdict": "uncertain",
+      "llm_round1": {
+        "id": 9,
+        "finding_id": "5ef9f68d35de3755f077033e0059ea8e",
+        "is_true": null,
+        "reason": "需要人工审查",
+        "fp_category": "unknown"
+      },
+      "llm_round2": {
+        "id": 10,
+        "finding_id": "5ef9f68d35de3755f077033e0059ea8e",
+        "is_true": null,
+        "reason": "需要人工审查",
+        "fp_category": "unknown"
+      },
+      "llm_agree": true,
+      "fp_category": "uncertain",
+      "fusion_reason": "双轮均无法确定，标记 uncertain 并进入人工复核。 R1: 需要人工审查 | R2: 需要人工审查",
+      "uncertain": true,
+      "finding": {
+        "id": "5ef9f68d35de3755f077033e0059ea8e",
+        "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c:200:39: error: Memory pointed to by 'p' is freed twice.",
+        "tool": "cppcheck",
+        "rule": "doubleFree",
+        "location": {
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c",
+          "line": 200,
+          "col": 39
+        },
+        "message": "Memory pointed to by 'p' is freed twice.",
+        "severity": "error",
+        "rule_layer": {
+          "decision": "keep",
+          "reason": "kept",
+          "likely_fp": false,
+          "fp_reason": "no_fp_signal"
+        },
+        "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\main.c:200\n   170 | \n   171 | \n   172 | \n   173 | \n   174 | \n   175 | \n   176 | \n   177 | \n   178 | \n   179 | \n   180 | \n   181 | \n   182 | \n   183 | \n   184 | \n   185 | \n   186 | \n   187 | \n   188 | \n   189 | \n   190 | \n   191 | \n   192 | \n   193 | \n   194 | \n   195 | \n   196 | \n   197 | \n   198 | \n   199 | \n>> 200 | void d(){ void *p=malloc(8); free(p); free(p); }\n   201 | \n   202 | \n   203 | \n   204 | \n   205 | \n   206 | \n   207 | \n   208 | \n   209 | \n   210 | ",
+        "metadata": {
+          "cwe": "415",
+          "category": "memory/double_free"
+        }
+      }
+    },
+    {
+      "finding_id": "9a3d69ae3924b0c14323ed90892a2152",
+      "final_verdict": "false",
+      "llm_round1": {
+        "id": 11,
+        "finding_id": "9a3d69ae3924b0c14323ed90892a2152",
+        "is_true": false,
+        "reason": "ptr在函数末尾被free，仅特定分支泄露",
+        "fp_category": "path"
+      },
+      "llm_round2": {
+        "id": 12,
+        "finding_id": "9a3d69ae3924b0c14323ed90892a2152",
+        "is_true": false,
+        "reason": "ptr在函数末尾被free，仅特定分支泄露",
+        "fp_category": "path"
+      },
+      "llm_agree": true,
+      "fp_category": "path",
+      "fusion_reason": "双轮一致判定为误报(path)。R1: ptr在函数末尾被free，仅特定分支泄露 | R2: ptr在函数末尾被free，仅特定分支泄露",
+      "uncertain": false,
+      "finding": {
+        "id": "9a3d69ae3924b0c14323ed90892a2152",
+        "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c:88:51: error: Memory leak: ptr",
+        "tool": "cppcheck",
+        "rule": "memleak",
+        "location": {
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c",
+          "line": 88,
+          "col": 51
+        },
+        "message": "Memory leak: ptr",
+        "severity": "error",
+        "rule_layer": {
+          "decision": "keep",
+          "reason": "kept",
+          "likely_fp": false,
+          "fp_reason": "no_fp_signal"
+        },
+        "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\mem.c:88\n   58 | \n   59 | \n   60 | \n   61 | \n   62 | \n   63 | \n   64 | \n   65 | \n   66 | \n   67 | \n   68 | \n   69 | \n   70 | \n   71 | \n   72 | \n   73 | \n   74 | \n   75 | \n   76 | \n   77 | \n   78 | \n   79 | \n   80 | \n   81 | \n   82 | \n   83 | \n   84 | \n   85 | \n   86 | \n   87 | \n>> 88 | int f(int fail){ char *ptr = malloc(16); if(fail) return -1; free(ptr); return 0; }\n   89 | \n   90 | \n   91 | \n   92 | \n   93 | \n   94 | \n   95 | \n   96 | \n   97 | \n   98 | ",
+        "metadata": {
+          "cwe": "401",
+          "category": "resource/leak"
+        }
+      }
+    },
+    {
+      "finding_id": "179fe9cd296a48583363dd1320df1492",
+      "final_verdict": "false",
+      "llm_round1": {
+        "id": 13,
+        "finding_id": "179fe9cd296a48583363dd1320df1492",
+        "is_true": false,
+        "reason": "解引用发生在空指针检查之前，实际运行时s不可能为NULL",
+        "fp_category": "path"
+      },
+      "llm_round2": {
+        "id": 14,
+        "finding_id": "179fe9cd296a48583363dd1320df1492",
+        "is_true": false,
+        "reason": "解引用发生在空指针检查之前，实际运行时s不可能为NULL",
+        "fp_category": "path"
+      },
+      "llm_agree": true,
+      "fp_category": "path",
+      "fusion_reason": "双轮一致判定为误报(path)。R1: 解引用发生在空指针检查之前，实际运行时s不可能为NULL | R2: 解引用发生在空指针检查之前，实际运行时s不可能为NULL",
+      "uncertain": false,
+      "finding": {
+        "id": "179fe9cd296a48583363dd1320df1492",
+        "raw": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45:50: warning: Either the condition '!s' is redundant or there is possible null pointer dereference: s.",
+        "tool": "cppcheck",
+        "rule": "nullPointerRedundantCheck",
+        "location": {
+          "file": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c",
+          "line": 45,
+          "col": 50
+        },
+        "message": "Either the condition '!s' is redundant or there is possible null pointer dereference: s.",
+        "severity": "warning",
+        "rule_layer": {
+          "decision": "keep",
+          "reason": "kept",
+          "likely_fp": true,
+          "fp_reason": "non_security_or_style_warning"
+        },
+        "code_context": "c:\\Users\\11452\\Desktop\\software quality assurance\\code\\sample_target\\src\\net.c:45\n   15 | \n   16 | \n   17 | \n   18 | \n   19 | \n   20 | \n   21 | \n   22 | \n   23 | \n   24 | \n   25 | \n   26 | \n   27 | \n   28 | \n   29 | \n   30 | \n   31 | \n   32 | \n   33 | \n   34 | \n   35 | \n   36 | \n   37 | \n   38 | \n   39 | \n   40 | \n   41 | \n   42 | \n   43 | \n   44 | \n>> 45 | int connect_socket(struct socket *s){ int port = s->port; if(!s) return -1; return port; }\n   46 | \n   47 | \n   48 | \n   49 | \n   50 | \n   51 | \n   52 | \n   53 | \n   54 | \n   55 | ",
+        "metadata": {
+          "cwe": "476",
+          "category": "memory/null_pointer"
+        }
+      }
+    }
+  ]
+}
