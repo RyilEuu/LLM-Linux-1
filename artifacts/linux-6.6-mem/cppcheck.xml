@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.21.0"/>
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/mm.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/mm.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="12" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/miscdevice.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/miscdevice.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="13" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/slab.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/slab.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="14" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/vmalloc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/vmalloc.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="15" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/mman.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/mman.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="16" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/random.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/random.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="17" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/init.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/init.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="18" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/tty.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/tty.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="19" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/capability.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/capability.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="20" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/ptrace.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/ptrace.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="21" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/device.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/device.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="22" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/highmem.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/highmem.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="23" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/backing-dev.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/backing-dev.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="24" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/shmem_fs.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/shmem_fs.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="25" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/splice.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/splice.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="26" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/pfn.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/pfn.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="27" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/export.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/export.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="28" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/io.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/io.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="29" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/uio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/uio.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="30" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/uaccess.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/uaccess.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="31" column="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/security.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/security.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="32" column="2"/>
+        </error>
+        <error id="normalCheckLevelMaxBranches" severity="information" msg="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." verbose="Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches." file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="0" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!allowed&apos; is always false" verbose="Condition &apos;!allowed&apos; is always false" cwe="570" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="146" column="7" info="Condition &apos;!allowed&apos; is always false"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="145" column="28" info="Assignment &apos;allowed=page_is_allowed(p&gt;&gt;PAGE_SHIFT)&apos;, assigned value is 1"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="145" column="28" info="Calling function &apos;page_is_allowed&apos; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;allowed==2&apos; is always false" verbose="Condition &apos;allowed==2&apos; is always false" cwe="570" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="150" column="15" info="Condition &apos;allowed==2&apos; is always false"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="145" column="28" info="Assignment &apos;allowed=page_is_allowed(p&gt;&gt;PAGE_SHIFT)&apos;, assigned value is 1"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="145" column="28" info="Calling function &apos;page_is_allowed&apos; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!allowed&apos; is always false" verbose="Condition &apos;!allowed&apos; is always false" cwe="570" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="225" column="7" info="Condition &apos;!allowed&apos; is always false"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="224" column="28" info="Assignment &apos;allowed=page_is_allowed(p&gt;&gt;PAGE_SHIFT)&apos;, assigned value is 1"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="224" column="28" info="Calling function &apos;page_is_allowed&apos; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;allowed==1&apos; is always true" verbose="Condition &apos;allowed==1&apos; is always true" cwe="571" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="229" column="15" info="Condition &apos;allowed==1&apos; is always true"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="224" column="28" info="Assignment &apos;allowed=page_is_allowed(p&gt;&gt;PAGE_SHIFT)&apos;, assigned value is 1"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="224" column="28" info="Calling function &apos;page_is_allowed&apos; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!valid_mmap_phys_addr_range(pgoff,len)&apos; is always false" verbose="Condition &apos;!valid_mmap_phys_addr_range(pgoff,len)&apos; is always false" cwe="570" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="319" column="6" info="Condition &apos;!valid_mmap_phys_addr_range(pgoff,len)&apos; is always false"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="319" column="33" info="Calling function &apos;valid_mmap_phys_addr_range&apos; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!valid_mmap_phys_addr_range(vma-&gt;vm_pgoff,size)&apos; is always false" verbose="Condition &apos;!valid_mmap_phys_addr_range(vma-&gt;vm_pgoff,size)&apos; is always false" cwe="570" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="368" column="6" info="Condition &apos;!valid_mmap_phys_addr_range(vma-&gt;vm_pgoff,size)&apos; is always false"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="368" column="33" info="Calling function &apos;valid_mmap_phys_addr_range&apos; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!range_is_allowed(vma-&gt;vm_pgoff,size)&apos; is always false" verbose="Condition &apos;!range_is_allowed(vma-&gt;vm_pgoff,size)&apos; is always false" cwe="570" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="374" column="6" info="Condition &apos;!range_is_allowed(vma-&gt;vm_pgoff,size)&apos; is always false"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="374" column="23" info="Calling function &apos;range_is_allowed&apos; returns 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!phys_mem_access_prot_allowed(file,vma-&gt;vm_pgoff,size,&amp;vma-&gt;vm_page_prot)&apos; is always false" verbose="Condition &apos;!phys_mem_access_prot_allowed(file,vma-&gt;vm_pgoff,size,&amp;vma-&gt;vm_page_prot)&apos; is always false" cwe="570" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="377" column="6" info="Condition &apos;!phys_mem_access_prot_allowed(file,vma-&gt;vm_pgoff,size,&amp;vma-&gt;vm_page_prot)&apos; is always false"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="377" column="35" info="Calling function &apos;phys_mem_access_prot_allowed&apos; returns 1"/>
+        </error>
+        <error id="unreachableCode" severity="style" msg="Statements following &apos;return&apos; will never be executed." verbose="Statements following &apos;return&apos; will never be executed." cwe="561" inconclusive="true" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="537" column="2"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const" verbose="Parameter &apos;file&apos; can be declared as pointer to const" cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="264" column="54" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;vma_prot&apos; can be declared as pointer to const" verbose="Parameter &apos;vma_prot&apos; can be declared as pointer to const" cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="265" column="51" info="Parameter &apos;vma_prot&apos; can be declared as pointer to const"/>
+            <symbol>vma_prot</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const" verbose="Parameter &apos;file&apos; can be declared as pointer to const" cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="299" column="51" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;get_unmapped_area_mem&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;get_unmapped_area_mem&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="313" column="57" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="652" column="23" info="You might need to cast the function pointer here"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;memory_mmap_capabilities&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;memory_mmap_capabilities&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="325" column="55" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="653" column="23" info="You might need to cast the function pointer here"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;zero_mmap_capabilities&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;zero_mmap_capabilities&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="331" column="53" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="683" column="23" info="You might need to cast the function pointer here"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;read_null&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;read_null&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="440" column="39" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="659" column="11" info="You might need to cast the function pointer here"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;buf&apos; can be declared as pointer to const. However it seems that &apos;read_null&apos; is a callback function, if &apos;buf&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;buf&apos; can be declared as pointer to const. However it seems that &apos;read_null&apos; is a callback function, if &apos;buf&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="440" column="58" info="Parameter &apos;buf&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="659" column="11" info="You might need to cast the function pointer here"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ppos&apos; can be declared as pointer to const. However it seems that &apos;read_null&apos; is a callback function, if &apos;ppos&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ppos&apos; can be declared as pointer to const. However it seems that &apos;read_null&apos; is a callback function, if &apos;ppos&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="441" column="27" info="Parameter &apos;ppos&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="659" column="11" info="You might need to cast the function pointer here"/>
+            <symbol>ppos</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;write_null&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;write_null&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="446" column="40" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="676" column="12" info="You might need to cast the function pointer here"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ppos&apos; can be declared as pointer to const. However it seems that &apos;write_null&apos; is a callback function, if &apos;ppos&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ppos&apos; can be declared as pointer to const. However it seems that &apos;write_null&apos; is a callback function, if &apos;ppos&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="447" column="28" info="Parameter &apos;ppos&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="676" column="12" info="You might need to cast the function pointer here"/>
+            <symbol>ppos</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;iocb&apos; can be declared as pointer to const. However it seems that &apos;read_iter_null&apos; is a callback function, if &apos;iocb&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;iocb&apos; can be declared as pointer to const. However it seems that &apos;read_iter_null&apos; is a callback function, if &apos;iocb&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="452" column="45" info="Parameter &apos;iocb&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="661" column="15" info="You might need to cast the function pointer here"/>
+            <symbol>iocb</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;to&apos; can be declared as pointer to const. However it seems that &apos;read_iter_null&apos; is a callback function, if &apos;to&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;to&apos; can be declared as pointer to const. However it seems that &apos;read_iter_null&apos; is a callback function, if &apos;to&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="452" column="68" info="Parameter &apos;to&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="661" column="15" info="You might need to cast the function pointer here"/>
+            <symbol>to</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;info&apos; can be declared as pointer to const. However it seems that &apos;pipe_to_null&apos; is a callback function, if &apos;info&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;info&apos; can be declared as pointer to const. However it seems that &apos;pipe_to_null&apos; is a callback function, if &apos;info&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="464" column="49" info="Parameter &apos;info&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="473" column="55" info="You might need to cast the function pointer here"/>
+            <symbol>info</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;buf&apos; can be declared as pointer to const. However it seems that &apos;pipe_to_null&apos; is a callback function, if &apos;buf&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;buf&apos; can be declared as pointer to const. However it seems that &apos;pipe_to_null&apos; is a callback function, if &apos;buf&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="464" column="75" info="Parameter &apos;buf&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="473" column="55" info="You might need to cast the function pointer here"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;sd&apos; can be declared as pointer to const. However it seems that &apos;pipe_to_null&apos; is a callback function, if &apos;sd&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;sd&apos; can be declared as pointer to const. However it seems that &apos;pipe_to_null&apos; is a callback function, if &apos;sd&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="465" column="24" info="Parameter &apos;sd&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="473" column="55" info="You might need to cast the function pointer here"/>
+            <symbol>sd</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ioucmd&apos; can be declared as pointer to const. However it seems that &apos;uring_cmd_null&apos; is a callback function, if &apos;ioucmd&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ioucmd&apos; can be declared as pointer to const. However it seems that &apos;uring_cmd_null&apos; is a callback function, if &apos;ioucmd&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="476" column="48" info="Parameter &apos;ioucmd&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="664" column="15" info="You might need to cast the function pointer here"/>
+            <symbol>ioucmd</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;iocb&apos; can be declared as pointer to const. However it seems that &apos;read_iter_zero&apos; is a callback function, if &apos;iocb&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;iocb&apos; can be declared as pointer to const. However it seems that &apos;read_iter_zero&apos; is a callback function, if &apos;iocb&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="481" column="45" info="Parameter &apos;iocb&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="689" column="15" info="You might need to cast the function pointer here"/>
+            <symbol>iocb</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;get_unmapped_area_zero&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;get_unmapped_area_zero&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="543" column="58" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="681" column="23" info="You might need to cast the function pointer here"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;write_full&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;file&apos; can be declared as pointer to const. However it seems that &apos;write_full&apos; is a callback function, if &apos;file&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="565" column="40" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="690" column="12" info="You might need to cast the function pointer here"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ppos&apos; can be declared as pointer to const. However it seems that &apos;write_full&apos; is a callback function, if &apos;ppos&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ppos&apos; can be declared as pointer to const. However it seems that &apos;write_full&apos; is a callback function, if &apos;ppos&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="566" column="28" info="Parameter &apos;ppos&apos; can be declared as pointer to const"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="690" column="12" info="You might need to cast the function pointer here"/>
+            <symbol>ppos</symbol>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;linux/efi.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results." verbose="Include file: &lt;linux/efi.h&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="35" column="3"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!private_mapping_ok(vma)&apos; is always false" verbose="Condition &apos;!private_mapping_ok(vma)&apos; is always false" cwe="570" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="371" column="6" info="Condition &apos;!private_mapping_ok(vma)&apos; is always false"/>
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="371" column="25" info="Calling function &apos;private_mapping_ok&apos; returns 1"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;vma&apos; can be declared as pointer to const" verbose="Parameter &apos;vma&apos; can be declared as pointer to const" cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="343" column="61" info="Parameter &apos;vma&apos; can be declared as pointer to const"/>
+            <symbol>vma</symbol>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;file&apos; can be declared as pointer to const" verbose="Parameter &apos;file&apos; can be declared as pointer to const" cwe="398" file0="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="278" column="41" info="Parameter &apos;file&apos; can be declared as pointer to const"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="staticFunction" severity="style" msg="The function &apos;phys_mem_access_prot_allowed&apos; should have static linkage since it is not used outside of its translation unit." verbose="The function &apos;phys_mem_access_prot_allowed&apos; should have static linkage since it is not used outside of its translation unit.">
+            <location file="c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c" line="264" column="12"/>
+            <symbol>phys_mem_access_prot_allowed</symbol>
+        </error>
+        <error id="checkersReport" severity="information" msg="Active checkers: 119/186 (use --checkers-report=&lt;filename&gt; to see details)" verbose="Active checkers: 119/186 (use --checkers-report=&lt;filename&gt; to see details)"/>
+    </errors>
+</results>

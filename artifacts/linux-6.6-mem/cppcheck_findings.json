@@ -1,0 +1,874 @@
+{
+  "summary": {
+    "total": 57,
+    "by_tool": {
+      "cppcheck": 57
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "2fc3e0e18cc897f3b8b3c7b115990e12",
+      "raw": ": information: Include file: <linux/mm.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/mm.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "8e7d0b3de045d66aa1cdd65cf7551c0b",
+      "raw": ": information: Include file: <linux/miscdevice.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/miscdevice.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "aa2a962bc61cffb953a369c9166f2582",
+      "raw": ": information: Include file: <linux/slab.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/slab.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "b5394e1c6c15a40555178f63f7a9e865",
+      "raw": ": information: Include file: <linux/vmalloc.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/vmalloc.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "0e908bc73fd939fef56ea0b6296bf4cf",
+      "raw": ": information: Include file: <linux/mman.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/mman.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "e82a873ff46045b0492835ab4054cac2",
+      "raw": ": information: Include file: <linux/random.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/random.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "56b9e7701d3d1d3f549213fd78dce976",
+      "raw": ": information: Include file: <linux/init.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/init.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "bfa4901113c7ffcf81bcd725da9a08bc",
+      "raw": ": information: Include file: <linux/tty.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/tty.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "6a28173c746c4e00e3cbb4c2dfb581bd",
+      "raw": ": information: Include file: <linux/capability.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/capability.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "b549e65b5571d1824632940404e654ee",
+      "raw": ": information: Include file: <linux/ptrace.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/ptrace.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "bb44a08b76a200bed675723f69b7ae87",
+      "raw": ": information: Include file: <linux/device.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/device.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "6d6baaf7f55cfcdf0d37946d77163e91",
+      "raw": ": information: Include file: <linux/highmem.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/highmem.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "641f6727ed86f0e8e32b6c8cafff13b5",
+      "raw": ": information: Include file: <linux/backing-dev.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/backing-dev.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "ff7a541fe37ae0ca983db2a15573f8ee",
+      "raw": ": information: Include file: <linux/shmem_fs.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/shmem_fs.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "ffc3918db5c7a4101c000a6041eb91bd",
+      "raw": ": information: Include file: <linux/splice.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/splice.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "a270b4ec4d3d2b0e7a619641a3a93293",
+      "raw": ": information: Include file: <linux/pfn.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/pfn.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "c15e360ed2ad64cb5466baf492abedfe",
+      "raw": ": information: Include file: <linux/export.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/export.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "a9d9ce4821aae4ef6c473eed062d2b9d",
+      "raw": ": information: Include file: <linux/io.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/io.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "b32754539e7e73f024c215de0fb1a0dc",
+      "raw": ": information: Include file: <linux/uio.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/uio.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "fc05c0b0700b2a1a08a4b4722feaa89b",
+      "raw": ": information: Include file: <linux/uaccess.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/uaccess.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "fb864d8e1abd91fb7143a92ed2d9d7d4",
+      "raw": ": information: Include file: <linux/security.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/security.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "9ebc0eb44387f1d94074989d4b265137",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches.",
+      "tool": "cppcheck",
+      "rule": "normalCheckLevelMaxBranches",
+      "severity": "information",
+      "message": "Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches.",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "1ca9ef11c30202e3bca50a24f5190e0e",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition '!allowed' is always false",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition '!allowed' is always false",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "570"
+      }
+    },
+    {
+      "finding_id": "a4e59320db885ad14cc624b3a642cb17",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition 'allowed==2' is always false",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition 'allowed==2' is always false",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "570"
+      }
+    },
+    {
+      "finding_id": "1ca9ef11c30202e3bca50a24f5190e0e",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition '!allowed' is always false",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition '!allowed' is always false",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "570"
+      }
+    },
+    {
+      "finding_id": "dffec44abfaec293ea13de758bdad987",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition 'allowed==1' is always true",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition 'allowed==1' is always true",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "571"
+      }
+    },
+    {
+      "finding_id": "9d6b3cfdcef22937c7cae93198a5eadb",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition '!valid_mmap_phys_addr_range(pgoff,len)' is always false",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition '!valid_mmap_phys_addr_range(pgoff,len)' is always false",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "570"
+      }
+    },
+    {
+      "finding_id": "a135c58bf85a558d3df7d86b52ce62a2",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition '!valid_mmap_phys_addr_range(vma->vm_pgoff,size)' is always false",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition '!valid_mmap_phys_addr_range(vma->vm_pgoff,size)' is always false",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "570"
+      }
+    },
+    {
+      "finding_id": "01996cdb93389aca1779ff7c5ae4ce22",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition '!range_is_allowed(vma->vm_pgoff,size)' is always false",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition '!range_is_allowed(vma->vm_pgoff,size)' is always false",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "570"
+      }
+    },
+    {
+      "finding_id": "18ee2a89cf840f43d3f017ed58e828d6",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition '!phys_mem_access_prot_allowed(file,vma->vm_pgoff,size,&vma->vm_page_prot)' is always false",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition '!phys_mem_access_prot_allowed(file,vma->vm_pgoff,size,&vma->vm_page_prot)' is always false",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "570"
+      }
+    },
+    {
+      "finding_id": "92f77bfd13e17115cb4642dda9fb9deb",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Statements following 'return' will never be executed.",
+      "tool": "cppcheck",
+      "rule": "unreachableCode",
+      "severity": "style",
+      "message": "Statements following 'return' will never be executed.",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "561"
+      }
+    },
+    {
+      "finding_id": "4c0ae5feb06d240b0842d4611e93976e",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constParameterPointer",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "5cab90d0b588efd492442ae38dcab5b9",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'vma_prot' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constParameterPointer",
+      "severity": "style",
+      "message": "Parameter 'vma_prot' can be declared as pointer to const",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "4c0ae5feb06d240b0842d4611e93976e",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constParameterPointer",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "837866187017d24c5aeec2afe1207589",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const. However it seems that 'get_unmapped_area_mem' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const. However it seems that 'get_unmapped_area_mem' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "c7c9f677143273ef230b30fc86c85e09",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const. However it seems that 'memory_mmap_capabilities' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const. However it seems that 'memory_mmap_capabilities' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "a3fce2bdaf89fe283f9b80218e19f1e8",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const. However it seems that 'zero_mmap_capabilities' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const. However it seems that 'zero_mmap_capabilities' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "977bfc87891972251a204a1cc898b177",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const. However it seems that 'read_null' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const. However it seems that 'read_null' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "424647af9b4a6c2c7bf7ece6623270e9",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'buf' can be declared as pointer to const. However it seems that 'read_null' is a callback function, if 'buf' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'buf' can be declared as pointer to const. However it seems that 'read_null' is a callback function, if 'buf' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "68d27e8970ab04d3dcf95f06f166dd4b",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'ppos' can be declared as pointer to const. However it seems that 'read_null' is a callback function, if 'ppos' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'ppos' can be declared as pointer to const. However it seems that 'read_null' is a callback function, if 'ppos' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "7a9b45350bae9aa61575c597c7d0a727",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const. However it seems that 'write_null' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const. However it seems that 'write_null' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "2de7801eee640ec3c11a71cb0d15a140",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'ppos' can be declared as pointer to const. However it seems that 'write_null' is a callback function, if 'ppos' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'ppos' can be declared as pointer to const. However it seems that 'write_null' is a callback function, if 'ppos' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "2fe420e4fa978be12badef28f12bab53",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'iocb' can be declared as pointer to const. However it seems that 'read_iter_null' is a callback function, if 'iocb' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'iocb' can be declared as pointer to const. However it seems that 'read_iter_null' is a callback function, if 'iocb' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "350c09f356b8a58d2074b2d545ddeaa3",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'to' can be declared as pointer to const. However it seems that 'read_iter_null' is a callback function, if 'to' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'to' can be declared as pointer to const. However it seems that 'read_iter_null' is a callback function, if 'to' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "aef3d3b8b95a1a19fb11ba3867aaf620",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'info' can be declared as pointer to const. However it seems that 'pipe_to_null' is a callback function, if 'info' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'info' can be declared as pointer to const. However it seems that 'pipe_to_null' is a callback function, if 'info' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "f5013aa628e28107ce7f73898c1fce62",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'buf' can be declared as pointer to const. However it seems that 'pipe_to_null' is a callback function, if 'buf' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'buf' can be declared as pointer to const. However it seems that 'pipe_to_null' is a callback function, if 'buf' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "a4a19590c0b620a8c7df30fa12a4097a",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'sd' can be declared as pointer to const. However it seems that 'pipe_to_null' is a callback function, if 'sd' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'sd' can be declared as pointer to const. However it seems that 'pipe_to_null' is a callback function, if 'sd' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "61c3f724ae1aaaeeaf313659e857cec9",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'ioucmd' can be declared as pointer to const. However it seems that 'uring_cmd_null' is a callback function, if 'ioucmd' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'ioucmd' can be declared as pointer to const. However it seems that 'uring_cmd_null' is a callback function, if 'ioucmd' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "79ec8477099221cfe05c48fb27c94190",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'iocb' can be declared as pointer to const. However it seems that 'read_iter_zero' is a callback function, if 'iocb' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'iocb' can be declared as pointer to const. However it seems that 'read_iter_zero' is a callback function, if 'iocb' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "d30828fe70b5a6116b2e1cd5182fe1af",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const. However it seems that 'get_unmapped_area_zero' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const. However it seems that 'get_unmapped_area_zero' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "398fe7232d64e9398e79fecf527d4952",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const. However it seems that 'write_full' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const. However it seems that 'write_full' is a callback function, if 'file' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "c0e241f1aa97b10d61f3340cffd5b9b2",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'ppos' can be declared as pointer to const. However it seems that 'write_full' is a callback function, if 'ppos' is declared with const you might also need to cast function pointer(s).",
+      "tool": "cppcheck",
+      "rule": "constParameterCallback",
+      "severity": "style",
+      "message": "Parameter 'ppos' can be declared as pointer to const. However it seems that 'write_full' is a callback function, if 'ppos' is declared with const you might also need to cast function pointer(s).",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "17bd0e068fea3df0bfb0a692cc8a20df",
+      "raw": ": information: Include file: <linux/efi.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "tool": "cppcheck",
+      "rule": "missingIncludeSystem",
+      "severity": "information",
+      "message": "Include file: <linux/efi.h> not found. Please note: Standard library headers do not need to be provided to get proper results.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    },
+    {
+      "finding_id": "ddb8d15bd5130430d6c2745ce1a6be73",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Condition '!private_mapping_ok(vma)' is always false",
+      "tool": "cppcheck",
+      "rule": "knownConditionTrueFalse",
+      "severity": "style",
+      "message": "Condition '!private_mapping_ok(vma)' is always false",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "570"
+      }
+    },
+    {
+      "finding_id": "b374b7d1adf3793ea4b1b8033d797f46",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'vma' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constParameterPointer",
+      "severity": "style",
+      "message": "Parameter 'vma' can be declared as pointer to const",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "4c0ae5feb06d240b0842d4611e93976e",
+      "raw": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c: style: Parameter 'file' can be declared as pointer to const",
+      "tool": "cppcheck",
+      "rule": "constParameterPointer",
+      "severity": "style",
+      "message": "Parameter 'file' can be declared as pointer to const",
+      "location": {
+        "file": "c:/Users/11452/Desktop/software quality assurance/code/linux-kernel/drivers/char/mem.c",
+        "line": null,
+        "col": null
+      },
+      "metadata": {
+        "cwe": "398"
+      }
+    },
+    {
+      "finding_id": "ad6eefe26f2df04a5d78166e63fa4a75",
+      "raw": ": style: The function 'phys_mem_access_prot_allowed' should have static linkage since it is not used outside of its translation unit.",
+      "tool": "cppcheck",
+      "rule": "staticFunction",
+      "severity": "style",
+      "message": "The function 'phys_mem_access_prot_allowed' should have static linkage since it is not used outside of its translation unit.",
+      "location": {
+        "file": null,
+        "line": null,
+        "col": null
+      },
+      "metadata": {}
+    }
+  ]
+}
